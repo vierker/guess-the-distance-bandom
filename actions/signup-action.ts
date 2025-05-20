@@ -6,7 +6,7 @@ import { connMongoose } from "@/utils/connect-mongoose"
 import { signUpSchema } from "@/utils/form/login-validator"
 import { saltAndHashPassword } from "@/utils/password"
 
-export async function signUpAction(prevState: IState, formDate: FormData) {
+export async function signUpAction(prevState: IState, formData: FormData) {
   const rawFormData = {
     username: formData.get("username"),
     email: formData.get("email"),

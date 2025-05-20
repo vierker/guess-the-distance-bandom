@@ -26,7 +26,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
               },
             ])
           )
-        const passwordMatches = await comparePassword([password, user.password])
+        const passwordMatches = await comparePassword(password, user.password)
 
         if (!passwordMatches)
           throw new Error(
